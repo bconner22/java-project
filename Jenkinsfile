@@ -10,10 +10,6 @@
           sh 'ant -f test.xml -v'
           junit 'reports/result.xml'
         }
-        post { 
-          success {
-            archiveArtifacts artifacts: 'dist/*.jar', fingerprint: true
-        }
       }
       stage('build') {
         agent {
@@ -22,6 +18,11 @@
         steps {
           sh 'ant -f build.xml -v'
         }     
+        post { 
+          success {
+            archiveArtifacts artifacts: 'dist/*.jar', fingerprint: true
+          }
+	}
       }
       stage('deploy') {
         agent {
