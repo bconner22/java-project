@@ -44,8 +44,7 @@
       stage("Running on Debian") {
   	agent {
 	  docker 'openjdk:8u171-jdk'
-          label 'docker'
-	}
+        }
 	steps {
           sh "whoami"
 	  sh "hostname"
