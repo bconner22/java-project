@@ -46,8 +46,8 @@
 	  docker 'openjdk:8u171-jdk'
 	}
 	steps {
-          whoami
-	  hostname
+          sh "whoami"
+	  sh "hostname"
 	  sh "wget http://54.213.205.117/rectangles/all/rectangle_${env.BUILD_NUMBER}.jar"
 	  sh "java -jar rectangle_${env.BUILD_NUMBER}.jar 3 4"
 	}
