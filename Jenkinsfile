@@ -76,7 +76,7 @@
 	  sh 'git stash'
 	  echo 'Checking out development branch'
 	  sh 'git checkout development'
-	  echo 'Ensuring development is up to date"
+	  echo 'Ensuring development is up to date'
 	  sh 'git pull origin'
 	  echo 'Checking out master branch'
 	  sh 'git checkout master'
